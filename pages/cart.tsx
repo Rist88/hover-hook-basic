@@ -40,7 +40,7 @@ function Cart() {
       <Header />
       <div className="container-main">
         <main className="cart-page">
-          <h1>Check out</h1>
+          <h1 className="check-out-header">Check out</h1>
           {cartItemElements}
           <p className="total-cost">Total: {totalCostDisplay}</p>
           {cartItems.length > 0 ? (
@@ -48,7 +48,7 @@ function Cart() {
               <button onClick={placeOrder}>{buttonText}</button>
             </div>
           ) : (
-            <p>You have no items in your cart.</p>
+            <p className="no-items-subtext">You have no items in your cart.</p>
           )}
         </main>
       </div>

@@ -60,7 +60,7 @@ main.cart-page {
 }
 
 .cart-page .total-cost {
-  text-align: right;
+  align-self: end;
   font-size: 1.3em;
 }
 
@@ -159,6 +159,10 @@ header {
   box-shadow: 0px 2px 10px -5px rgba(21, 6, 5, 1);
 }
 
+.logo-text {
+  font-size: 1.6rem;
+}
+
 a:visited {
   color: var(--light-blue);
 }
@@ -167,4 +171,48 @@ a:hover {
 }
 a:active {
   color: var(--light-blue);
+}
+
+.remixIconBig {
+  font-size: 2.2rem;
+}
+
+.remixIconSmall {
+  font-size: 1.5rem;
+}
+
+@media screen and (min-width: 650px) {
+  .logo-text {
+    font-size: 2rem;
+  }
+
+  .cart-item > p {
+    font-size: 1.7rem;
+  }
+
+  .cart-page > h1 {
+    font-size: 2.5rem;
+  }
+
+  .check-out-header {
+    margin-top: 0em;
+    padding-top: 0.3em;
+  }
+
+  .cart-page .total-cost {
+    align-self: end;
+    font-size: 2rem;
+  }
+
+  .remixIconSmall {
+    font-size: 1.97rem;
+  }
+
+  .no-items-subtext {
+    font-size: 1.5rem;
+  }
+
+  .order-button > button {
+    font-size: 1.1rem;
+  }
 }

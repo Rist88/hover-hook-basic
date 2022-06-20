@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
-// import PropTypes from "prop-types";
 import { Context } from "../lib/Context";
 import useHover from "../hooks/useHover";
+import { IconContext } from "react-icons";
 import { RiDeleteBinFill, RiDeleteBinLine } from "react-icons/ri";
 
 function CartItem({
@@ -13,9 +13,13 @@ function CartItem({
   const { removeFromCart } = useContext(Context);
 
   const deleteBinIcon = hovered ? (
-    <RiDeleteBinLine className="ri-delete-bin-fill" />
+    <IconContext.Provider value={{ className: "remixIconSmall" }}>
+      <RiDeleteBinLine className="ri-delete-bin-fill" />
+    </IconContext.Provider>
   ) : (
-    <RiDeleteBinFill className="ri-delete-bin-line" />
+    <IconContext.Provider value={{ className: "remixIconSmall" }}>
+      <RiDeleteBinFill className="ri-delete-bin-line" />
+    </IconContext.Provider>
   );
 
   return (
@@ -29,11 +33,5 @@ function CartItem({
     </div>
   );
 }
-
-// CartItem.propTypes = {
-//   item: PropTypes.shape({
-//     url: PropTypes.string.isRequired,
-//   }),
-// };
 
 export default CartItem;

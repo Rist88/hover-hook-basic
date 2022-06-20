@@ -6,16 +6,13 @@ import { RiShoppingCartLine, RiShoppingCartFill } from "react-icons/ri";
 
 function Header() {
   const { cartItems } = useContext(Context);
-  const cartIconStyles = {
-    size: "2em",
-  };
   const CartPage =
     cartItems.length > 0 ? (
-      <IconContext.Provider value={cartIconStyles}>
+      <IconContext.Provider value={{ className: "remixIconBig" }}>
         <RiShoppingCartFill />
       </IconContext.Provider>
     ) : (
-      <IconContext.Provider value={cartIconStyles}>
+      <IconContext.Provider value={{ className: "remixIconBig" }}>
         <RiShoppingCartLine />
       </IconContext.Provider>
     );
@@ -23,7 +20,7 @@ function Header() {
     <header>
       <Link href="/">
         <a>
-          <h2>Pic Some</h2>
+          <h1 className="logo-text">Pic Some</h1>
         </a>
       </Link>
       <Link href="/cart">
