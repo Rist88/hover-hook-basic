@@ -12,7 +12,7 @@ function Photos() {
 
   return (
     <div className="container-main">
-      <main className="photos">{imageElements}</main>;
+      <main className="photos">{imageElements}</main>
     </div>
   );
 }
